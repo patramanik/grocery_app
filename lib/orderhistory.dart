@@ -71,10 +71,10 @@ class _OrderHistoryState extends State<OrderHistory> {
               color: Colors.white, fontSize: 25, fontWeight: FontWeight.w600),
         ),
         bottom: const PreferredSize(
+            preferredSize: Size.fromHeight(5),
             child: SizedBox(
               height: 0,
-            ),
-            preferredSize: Size.fromHeight(5)),
+            )),
       ),
       body: Container(
         color: bgColor,

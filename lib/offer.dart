@@ -6,11 +6,12 @@ class Offer extends StatefulWidget {
   const Offer({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _OfferState createState() => _OfferState();
 }
 
 class _OfferState extends State<Offer> {
-  Color bgColor = Color(0xFF08db5c);
+  Color bgColor = const Color(0xFF08db5c);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class _OfferState extends State<Offer> {
         elevation: 0,
         toolbarHeight: 70,
         backgroundColor: bgColor,
-        title: Text(
+        title: const Text(
           'Offer',
           style: TextStyle(fontSize: 25),
         ),
@@ -72,11 +73,11 @@ class _OfferState extends State<Offer> {
         width: width,
         padding: const EdgeInsets.only(top: 15),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
+          borderRadius: const BorderRadius.vertical(top: Radius.circular(40)),
           color: Colors.grey[200],
         ),
         child: ListView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           children: List.generate(
               price.length,
@@ -95,12 +96,12 @@ class _OfferState extends State<Offer> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
+                              SizedBox(
                                 width: (width) * .25,
                                 //color: Colors.amber,
                                 child: Image.network(img[index]),
                               ),
-                              Container(
+                              SizedBox(
                                 width: (width) * .6,
                                 //color: Colors.pink[50],
                                 child: Column(
@@ -116,11 +117,11 @@ class _OfferState extends State<Offer> {
                                           children: [
                                             Text(
                                               '₹${price[index].toStringAsFixed(2)}  ',
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   fontWeight: FontWeight.bold),
                                             ),
-                                            Text(
+                                            const Text(
                                               '₹',
                                               style: TextStyle(
                                                 fontSize: 20,
@@ -128,8 +129,8 @@ class _OfferState extends State<Offer> {
                                               ),
                                             ),
                                             Text(
-                                              '${mrp[index].toStringAsFixed(2)}',
-                                              style: TextStyle(
+                                              mrp[index].toStringAsFixed(2),
+                                              style: const TextStyle(
                                                   fontSize: 20,
                                                   color: Colors.black54,
                                                   decoration: TextDecoration
@@ -147,7 +148,7 @@ class _OfferState extends State<Offer> {
                                             child: Center(
                                                 child: Text(
                                               '₹ ${off[index]} OFF',
-                                              style: TextStyle(
+                                              style: const TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white),
                                             )),
@@ -155,13 +156,11 @@ class _OfferState extends State<Offer> {
                                         )
                                       ],
                                     ),
-                                    Container(
-                                      child: Text(
-                                        title[index],
-                                        style: TextStyle(fontSize: 20),
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
+                                    Text(
+                                      title[index],
+                                      style: const TextStyle(fontSize: 20),
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                     Row(
                                       mainAxisAlignment:
@@ -194,7 +193,7 @@ class _OfferState extends State<Offer> {
                                                 color: bgColor,
                                                 borderRadius:
                                                     BorderRadius.circular(5)),
-                                            child: Center(
+                                            child: const Center(
                                                 child: Text(
                                               'ADD   +',
                                               style: TextStyle(

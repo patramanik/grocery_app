@@ -15,7 +15,7 @@ class Home_page extends StatefulWidget {
 
 // ignore: camel_case_types
 class _Home_pageState extends State<Home_page> {
-  Color bg = Color(0xFF08db5c);
+  Color bg = const Color(0xFF08db5c);
   String add = "Gopalpur,keshiary,paschim medinipur";
 
   //for 1st row variable start
@@ -83,7 +83,7 @@ class _Home_pageState extends State<Home_page> {
         appBar: AppBar(
             backgroundColor: bg,
             elevation: 0.0,
-            leading: Icon(
+            leading: const Icon(
               Icons.location_on,
               color: Colors.yellow,
             ),
@@ -94,11 +94,17 @@ class _Home_pageState extends State<Home_page> {
               ),
             ),
             bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(45.0),
                 child: Center(
                   child: Container(
                     height: 35.0,
                     width: w * 0.9,
-                    child: TextField(
+                    decoration: const BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(5.0),
+                        )),
+                    child: const TextField(
                       textAlignVertical: TextAlignVertical.bottom,
                       decoration: InputDecoration(
                         hintText: "Seach your daily bag",
@@ -106,22 +112,16 @@ class _Home_pageState extends State<Home_page> {
                         border: InputBorder.none,
                       ),
                     ),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(5.0),
-                        )),
                   ),
-                ),
-                preferredSize: Size.fromHeight(45.0)),
+                )),
             actions: [
               GestureDetector(
-                child: Icon(Icons.shopping_cart_outlined),
+                child: const Icon(Icons.shopping_cart_outlined),
                 onTap: () {
                   Navigator.pushNamed(context, MyRoutes.cart);
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               CircleAvatar(backgroundImage: NetworkImage(img1[0]))
@@ -129,15 +129,15 @@ class _Home_pageState extends State<Home_page> {
         body: Container(
           height: h,
           width: w,
-          margin: EdgeInsets.only(top: 25.0),
+          margin: const EdgeInsets.only(top: 25.0),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(40)),
             color: Colors.grey[200],
           ),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 Card(
@@ -146,25 +146,25 @@ class _Home_pageState extends State<Home_page> {
                     height: 100,
                     width: w * 0.95,
                     child: ListView(
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: List.generate(
                           img1.length,
-                          (index) => Container(
+                          (index) => SizedBox(
                                 height: 90,
                                 width: 80,
                                 child: Column(
                                   children: [
                                     Center(
                                       child: Container(
-                                          margin: EdgeInsets.only(
+                                          margin: const EdgeInsets.only(
                                               top: 5.0,
                                               bottom: 5.0,
                                               left: 5.0,
                                               right: 5.0),
                                           decoration: BoxDecoration(
                                               border: Border.all(
-                                                color: Color(0xFFCBF9E2),
+                                                color: const Color(0xFFCBF9E2),
                                                 width: 10.0,
                                               ),
                                               borderRadius:
@@ -179,7 +179,7 @@ class _Home_pageState extends State<Home_page> {
                                     Text(
                                       name1[index],
                                       overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -189,7 +189,7 @@ class _Home_pageState extends State<Home_page> {
                   ),
                 ),
                 Stack(children: [
-                  Container(
+                  SizedBox(
                     width: w * 0.95,
                     height: 170,
                     child: Center(
@@ -205,7 +205,7 @@ class _Home_pageState extends State<Home_page> {
                             viewportFraction: 1.1,
                             autoPlay: true,
                             pauseAutoPlayOnTouch: true,
-                            autoPlayInterval: Duration(seconds: 5),
+                            autoPlayInterval: const Duration(seconds: 5),
                             onPageChanged: (index, reason) {
                               setState(() {
                                 count = index;
@@ -237,7 +237,7 @@ class _Home_pageState extends State<Home_page> {
                             children: List.generate(
                                 img2.length,
                                 (index1) => Padding(
-                                      padding: EdgeInsets.only(
+                                      padding: const EdgeInsets.only(
                                         left: 8.0,
                                       ),
                                       child: Container(
@@ -281,7 +281,7 @@ class _Home_pageState extends State<Home_page> {
                                         color: Colors.amber,
                                         child: Image.network(img[index]),
                                       ),
-                                      Container(
+                                      SizedBox(
                                         width: w * 0.6,
                                         //color: Colors.pink[50],
                                         child: Column(
@@ -299,14 +299,14 @@ class _Home_pageState extends State<Home_page> {
                                                   children: [
                                                     Text(
                                                       price[index],
-                                                      style: TextStyle(
+                                                      style: const TextStyle(
                                                           fontSize: 20,
                                                           fontWeight:
                                                               FontWeight.bold),
                                                     ),
                                                     Text(
                                                       mrp[index],
-                                                      style: TextStyle(
+                                                      style: const TextStyle(
                                                           fontSize: 20,
                                                           color: Colors.black54,
                                                           decoration:
@@ -328,7 +328,7 @@ class _Home_pageState extends State<Home_page> {
                                                     child: Center(
                                                         child: Text(
                                                       off[index],
-                                                      style: TextStyle(
+                                                      style: const TextStyle(
                                                           fontWeight:
                                                               FontWeight.bold,
                                                           color: Colors.white),
@@ -337,13 +337,11 @@ class _Home_pageState extends State<Home_page> {
                                                 )
                                               ],
                                             ),
-                                            Container(
-                                              child: Text(
-                                                title[index],
-                                                style: TextStyle(fontSize: 20),
-                                                maxLines: 2,
-                                                overflow: TextOverflow.ellipsis,
-                                              ),
+                                            Text(
+                                              title[index],
+                                              style: const TextStyle(fontSize: 20),
+                                              maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
                                             ),
                                             Row(
                                               mainAxisAlignment:
@@ -381,7 +379,7 @@ class _Home_pageState extends State<Home_page> {
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(5)),
-                                                    child: Center(
+                                                    child: const Center(
                                                         child: Text(
                                                       'ADD   +',
                                                       style: TextStyle(

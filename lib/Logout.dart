@@ -15,9 +15,9 @@ class LogoutAlert extends StatefulWidget {
 }
 
 class _LogoutAlertState extends State<LogoutAlert> {
-  final bgcolor = Color(0xFF08db5c);
+  final bgcolor = const Color(0xFF08db5c);
   bool tappedYes = false;
-  final colorBright = Color(0xFF08db5c);
+  final colorBright = const Color(0xFF08db5c);
   get async => null;
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _LogoutAlertState extends State<LogoutAlert> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: bgcolor,
-        title: Text(
+        title: const Text(
           'Profile',
           style: TextStyle(color: Colors.white, fontSize: 22),
         ),
@@ -39,7 +39,7 @@ class _LogoutAlertState extends State<LogoutAlert> {
         width: width,
         padding: const EdgeInsets.only(top: 15),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
+          borderRadius: const BorderRadius.vertical(
             top: Radius.circular(40),
           ),
           color: Colors.grey[200],
@@ -66,8 +66,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                             height: 25,
                             width: 30,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
+                          const Padding(
+                            padding: EdgeInsets.all(8.0),
                             child: Text(
                               'My Order',
                               style:
@@ -90,8 +90,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "My Address",
                             style: TextStyle(color: Colors.black, fontSize: 18),
@@ -115,7 +115,7 @@ class _LogoutAlertState extends State<LogoutAlert> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         "Sale and Offers",
                         style: TextStyle(
                             color: Colors.grey,
@@ -133,8 +133,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                                 height: 25,
                                 width: 30,
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 8),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8),
                                 child: Text(
                                   "Offers",
                                   style: TextStyle(
@@ -158,8 +158,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                     color: Colors.grey,
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10, left: 19),
+                const Padding(
+                  padding: EdgeInsets.only(top: 10, left: 19),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -183,8 +183,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "Chat with Us",
                             style: TextStyle(color: Colors.black, fontSize: 19),
@@ -205,8 +205,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "Starred Items",
                             style: TextStyle(color: Colors.black, fontSize: 19),
@@ -227,8 +227,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "Share & Earn",
                             style: TextStyle(color: Colors.black, fontSize: 19),
@@ -249,8 +249,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
+                        const Padding(
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
                             "About Us",
                             style: TextStyle(color: Colors.black, fontSize: 20),
@@ -281,8 +281,8 @@ class _LogoutAlertState extends State<LogoutAlert> {
                           height: 25,
                           width: 30,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8),
+                        const Padding(
+                          padding: EdgeInsets.only(left: 8),
                           child: Text(
                             "Logout",
                             style: TextStyle(color: Colors.black, fontSize: 20),
@@ -354,8 +354,8 @@ class Alert_Dialog {
                   child: TextButton(
                     onPressed: () =>
                         Navigator.of(context).pop(DialogAction.Cancel),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
                       child: Text("No",
                           style: TextStyle(color: Colors.white, fontSize: 16)),
                     ),
@@ -368,13 +368,13 @@ class Alert_Dialog {
                   height: 35, width: 65,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5.0),
-                      color: Color(0xFF08db5c)),
+                      color: const Color(0xFF08db5c)),
                   //color: Color(0xFF08db5c),
                   child: TextButton(
                     onPressed: () =>
                         Navigator.of(context).pop(DialogAction.yes),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 10, right: 10),
                       child: Text("Yes",
                           style: TextStyle(color: Colors.white, fontSize: 16)),
                     ),

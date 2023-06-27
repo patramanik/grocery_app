@@ -55,10 +55,10 @@ class _OrderDetailsState extends State<OrderDetails> {
           ),
         ),
         bottom: const PreferredSize(
+            preferredSize: Size.fromHeight(5),
             child: SizedBox(
               height: 0,
-            ),
-            preferredSize: Size.fromHeight(5)),
+            )),
       ),
       body: Container(
         color: bgColor,
@@ -292,10 +292,10 @@ class _OrderDetailsState extends State<OrderDetails> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Column(
+                                      const Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
-                                        children: const [
+                                        children: [
                                           Padding(
                                             padding: EdgeInsets.all(4.0),
                                             child: Text(
@@ -339,7 +339,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           Padding(
                                             padding: const EdgeInsets.all(4.0),
                                             child: Text(
-                                              "₹ " + item_total.toString(),
+                                              "₹ $item_total",
                                               style: const TextStyle(
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.w800),
@@ -348,7 +348,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           Padding(
                                             padding: const EdgeInsets.all(4.0),
                                             child: Text(
-                                              "₹ " + SGST.toString(),
+                                              "₹ $SGST",
                                               style: const TextStyle(
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.w800),
@@ -357,7 +357,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           Padding(
                                             padding: const EdgeInsets.all(4.0),
                                             child: Text(
-                                              "₹ " + IGST.toString(),
+                                              "₹ $IGST",
                                               style: const TextStyle(
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.w800),
@@ -366,7 +366,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                           Padding(
                                             padding: const EdgeInsets.all(4.0),
                                             child: Text(
-                                              "₹ " + DeliveryCharge.toString(),
+                                              "₹ $DeliveryCharge",
                                               style: const TextStyle(
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.w800),
@@ -399,7 +399,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Text(
-                                          "₹ " + GrandTotal.toString(),
+                                          "₹ $GrandTotal",
                                           style: const TextStyle(
                                               fontSize: 20.0,
                                               fontWeight: FontWeight.w700),
@@ -434,7 +434,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                         Padding(
                                           padding: const EdgeInsets.all(8.0),
                                           child: Text(
-                                            "₹ " + totalSavimgs.toString(),
+                                            "₹ $totalSavimgs",
                                             style: const TextStyle(
                                               color: Colors.white,
                                               fontSize: 17.0,
@@ -465,12 +465,12 @@ class _OrderDetailsState extends State<OrderDetails> {
                           ),
                           Container(
                             margin: const EdgeInsets.all(8.0),
-                            child: Row(
+                            child: const Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       "Order Number",
                                       style: TextStyle(
@@ -504,7 +504,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                 ),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: const [
+                                  children: [
                                     Text(
                                       "Date",
                                       style: TextStyle(
@@ -539,9 +539,9 @@ class _OrderDetailsState extends State<OrderDetails> {
                           ),
                           Container(
                             margin: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Column(
+                            child: const Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
+                              children: [
                                 Text(
                                   "Deliver to",
                                   style: TextStyle(

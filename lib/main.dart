@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SignIn(),
+      home: const SignIn(),
       routes: {
-        MyRoutes.signin: (context) => SignIn(),
-        MyRoutes.signup: (context) => SignUp(),
-        MyRoutes.landingscreen: (context) => LandingScreen(),
-        MyRoutes.cart: (context) => Mycart(),
+        MyRoutes.signin: (context) => const SignIn(),
+        MyRoutes.signup: (context) => const SignUp(),
+        MyRoutes.landingscreen: (context) => const LandingScreen(),
+        MyRoutes.cart: (context) => const Mycart(),
       },
       //LandingScreen(),
     );

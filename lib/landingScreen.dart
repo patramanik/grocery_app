@@ -13,7 +13,7 @@ class LandingScreen extends StatefulWidget {
 }
 
 class _LandingScreenState extends State<LandingScreen> {
-  Color bgColor = Color(0xFF08db5c);
+  Color bgColor = const Color(0xFF08db5c);
   int currentIndex = 0;
   final iconList = <IconData>[
     CupertinoIcons.home,
@@ -27,7 +27,7 @@ class _LandingScreenState extends State<LandingScreen> {
     "Order History",
     "Profile",
   ];
-  var pageList = [Home_page(), Offer(), OrderHistory(), LogoutAlert()];
+  var pageList = [const Home_page(), const Offer(), const OrderHistory(), const LogoutAlert()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class _LandingScreenState extends State<LandingScreen> {
         backgroundColor: bgColor,
         currentIndex: currentIndex,
         selectedItemColor: Colors.white,
-        unselectedItemColor: Color(0xFFFFFFFF),
+        unselectedItemColor: const Color(0xFFFFFFFF),
         selectedFontSize: 0,
         unselectedFontSize: 0,
         items: List.generate(
@@ -53,8 +53,8 @@ class _LandingScreenState extends State<LandingScreen> {
                           colors: [Colors.yellow.shade300, bgColor],
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          stops: [.1, .1]))
-                  : BoxDecoration(),
+                          stops: const [.1, .1]))
+                  : const BoxDecoration(),
               //color: currentIndex == index ? Colors.yellow : bgColor,
               child: Icon(
                 iconList[index], size: 30,
